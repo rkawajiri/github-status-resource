@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -eu
+set -x
 
 [ ! -e /tmp/build/* ] || cd /tmp/build/*
 
