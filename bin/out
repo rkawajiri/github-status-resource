@@ -99,7 +99,7 @@ while [[ $REMAINING_TRIES -gt 0 ]]; do
 # lookup
 #
 
-curlgh "$source_endpoint/repos/$source_repository/commits/$source_branch/status" \
+curlgh "$source_endpoint/repos/$source_repository/commits/$commit/status" \
   | jq -c \
     --arg ref "$(jq -r '.id | tostring' < /tmp/gh-result)" \
     '{
